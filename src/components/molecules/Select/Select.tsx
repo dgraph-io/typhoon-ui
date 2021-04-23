@@ -8,8 +8,7 @@ import { stylegun } from "helpers/stylegun";
 import { uuid } from "helpers/utils";
 import { Button, Text, Stack, Container } from "components";
 import { keyCodes } from "helpers/constants";
-
-import theme from "theme";
+import theme from "../../../theme";
 import { SelectPropsType, ValueType } from "./Select.types";
 
 const checkIfParent = (parent: any, child: any) => {

@@ -1,4 +1,5 @@
-/**@jsx jsx */
+ /** @jsxRuntime classic */
+/** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";

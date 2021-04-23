@@ -14,7 +14,8 @@
     "noEmit": true,
     "target": "es5",
     "esModuleInterop": true,
-    "jsx": "react"
+    "jsx": "react",
+    "declaration": false
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }

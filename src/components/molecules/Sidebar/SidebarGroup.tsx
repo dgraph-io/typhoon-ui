@@ -10,9 +10,7 @@ import { useTheme } from "hooks/useTheme";
 import { styles } from "./Sidebar.styles";
 
 import { Heading, Stack, Link } from "components";
-
-// @ts-ignore
-import history from "libs/browserHistory";
+// import history from "libs/browserHistory";
 import { SidebarGroupPropsType, SidebarStackPropsType } from "./Sidebar.types";
 
 const SidebarStack = ({
@@ -63,9 +61,9 @@ const SidebarGroup = ({
 
     const handleTransition = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        history.push({
-            pathname: e.currentTarget.pathname,
-        });
+        // history.push({
+        //     pathname: e.currentTarget.pathname,
+        // });
     };
 
     return (

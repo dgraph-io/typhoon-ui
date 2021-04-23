@@ -1,6 +1,12 @@
 const path = require("path");
 
 module.exports = async ({ config }) => {
+  config.module.rules[0].use[0].options.presets = [
+    require.resolve("@babel/preset-react"),
+    require.resolve("@babel/preset-env"),
+    require.resolve("@emotion/babel-preset-css-prop"),
+  ];
+
   // styles
   config.module.rules.push({
     test: /\.(sass|scss)$/,
@@ -39,18 +45,15 @@ module.exports = async ({ config }) => {
   });
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve("awesome-typescript-loader"),
-        options: {
-          presets: [["react-app", { flow: false, typescript: true }]],
-          configFileName: "./tsconfig.json",
-        },
-      },
-      {
-        loader: require.resolve("react-docgen-typescript-loader"),
-      },
-    ],
+    loader: require.resolve("awesome-typescript-loader"),
+    options: {
+      presets: [
+        ["react-app", { flow: false, typescript: true }],
+        require.resolve("@emotion/babel-preset-css-prop"),
+      ],
+      configFileName: "./tsconfig.json",
+      // ... other configs
+    },
   });
   config.resolve.extensions.push(".ts", ".tsx");
 
@@ -60,5 +63,21 @@ module.exports = async ({ config }) => {
     helpers: path.resolve(__dirname, "../src/helpers/"),
   };
 
+  config.module.rules = config.module.rules.map((rule) => {
+    if (
+      String(rule.test) ===
+      String(
+        /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/
+      )
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      };
+    }
+
+    return rule;
+  });
+  
   return config;
 };

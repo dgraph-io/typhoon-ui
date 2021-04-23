@@ -1,4 +1,5 @@
-/**@jsx jsx */
+ /** @jsxRuntime classic */
+/** @jsx jsx */
 import { jsx } from "@emotion/core";
 
 import { styles } from "./Table.styles";

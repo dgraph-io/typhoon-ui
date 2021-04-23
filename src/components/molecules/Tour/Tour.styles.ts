@@ -1,4 +1,4 @@
-import theme from "theme";
+import theme from "../../../theme";
 import { merge } from "helpers/utils";
 
 export const tourTheme = merge(theme, {
