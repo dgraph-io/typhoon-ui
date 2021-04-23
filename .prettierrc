@@ -1,0 +1,13 @@
+{
+  "arrowParens": "avoid",
+  "tabWidth": 4,
+  "singleQuote": false,
+  "overrides": [
+    {
+      "files": ["*.json", ".prettierrc"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}
