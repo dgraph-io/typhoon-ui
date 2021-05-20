@@ -6,10 +6,18 @@ const nodeExternals = require('webpack-node-externals');
 module.exports = {
   entry: path.resolve(__dirname + '/src/components/index.ts'),
   devtool: false,
-  externals: [nodeExternals()],
+  target: 'node',
+  externals: [
+    nodeExternals(),
+    {
+      react: 'umd react',
+      'react-dom': 'umd react-dom',
+    },
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
+    libraryTarget: 'umd',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -18,6 +26,7 @@ module.exports = {
       components: path.resolve(__dirname, '/src/components/'),
       helpers: path.resolve(__dirname, '/src/helpers/'),
     },
+    symlinks: false,
   },
   module: {
     rules: [
