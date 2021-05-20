@@ -11,11 +11,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "target": "es5",
     "esModuleInterop": true,
     "jsx": "react",
-    "declaration": false
+    "declaration": true,
+    "outDir": "./dist/"
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }

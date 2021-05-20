@@ -45,15 +45,7 @@ module.exports = async ({ config }) => {
   });
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: require.resolve("awesome-typescript-loader"),
-    options: {
-      presets: [
-        ["react-app", { flow: false, typescript: true }],
-        require.resolve("@emotion/babel-preset-css-prop"),
-      ],
-      configFileName: "./tsconfig.json",
-      // ... other configs
-    },
+    loader: require.resolve("ts-loader"),
   });
   config.resolve.extensions.push(".ts", ".tsx");
 
