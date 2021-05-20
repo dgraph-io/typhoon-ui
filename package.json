@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Dgraph's design system",
   "main": "dist/index.js",
+  "typings": "dist/components/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
