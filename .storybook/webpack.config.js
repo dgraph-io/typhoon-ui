@@ -1,17 +1,17 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = async ({ config }) => {
   config.module.rules[0].use[0].options.presets = [
-    require.resolve("@babel/preset-react"),
-    require.resolve("@babel/preset-env"),
-    require.resolve("@emotion/babel-preset-css-prop"),
+    require.resolve('@babel/preset-react'),
+    require.resolve('@babel/preset-env'),
+    require.resolve('@emotion/babel-preset-css-prop'),
   ];
 
   // styles
   config.module.rules.push({
     test: /\.(sass|scss)$/,
-    use: ["resolve-url-loader"],
-    include: path.resolve(__dirname, "../"),
+    use: ['resolve-url-loader'],
+    include: path.resolve(__dirname, '../'),
   });
 
   // fonts
@@ -19,20 +19,20 @@ module.exports = async ({ config }) => {
     test: /\.(png|woff|woff2|eot|ttf)$/,
     use: [
       {
-        loader: "file-loader",
+        loader: 'file-loader',
         query: {
-          name: "[name].[ext]",
+          name: '[name].[ext]',
         },
       },
     ],
-    include: path.resolve(__dirname, "../"),
+    include: path.resolve(__dirname, '../'),
   });
 
   config.module.rules.unshift({
     test: /\.svg$/,
     use: [
       {
-        loader: "@svgr/webpack",
+        loader: '@svgr/webpack',
         options: {
           svgoConfig: {
             plugins: {
@@ -45,22 +45,14 @@ module.exports = async ({ config }) => {
   });
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: require.resolve("awesome-typescript-loader"),
-    options: {
-      presets: [
-        ["react-app", { flow: false, typescript: true }],
-        require.resolve("@emotion/babel-preset-css-prop"),
-      ],
-      configFileName: "./tsconfig.json",
-      // ... other configs
-    },
+    loader: require.resolve('ts-loader'),
   });
-  config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.extensions.push('.ts', '.tsx');
 
   config.resolve.alias = {
-    hooks: path.resolve(__dirname, "../src/hooks/"),
-    components: path.resolve(__dirname, "../src/components/"),
-    helpers: path.resolve(__dirname, "../src/helpers/"),
+    hooks: path.resolve(__dirname, '../src/hooks/'),
+    components: path.resolve(__dirname, '../src/components/'),
+    helpers: path.resolve(__dirname, '../src/helpers/'),
   };
 
   config.module.rules = config.module.rules.map((rule) => {
@@ -78,6 +70,6 @@ module.exports = async ({ config }) => {
 
     return rule;
   });
-  
+
   return config;
 };
