@@ -1,5 +1,5 @@
-import theme from "ds/theme";
 import { merge } from "helpers/utils";
+import { theme } from "../../../theme";
 
 export const tourTheme = merge(theme, {
     components: {

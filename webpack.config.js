@@ -6,9 +6,9 @@ const nodeExternals = require("webpack-node-externals");
 module.exports = {
     entry: [
         path.resolve(__dirname + "/src/components/index.ts"),
+        path.resolve(__dirname + "/src/theme.ts"),
         path.resolve(__dirname + "/src/hooks/index.ts"),
         path.resolve(__dirname + "/src/helpers/index.ts"),
-        path.resolve(__dirname + "/src/theme.ts"),
     ],
     devtool: false,
     target: "node",

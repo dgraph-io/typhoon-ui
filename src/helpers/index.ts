@@ -8,9 +8,12 @@ import {
     getShortFullDate,
     getShortTime,
 } from "./date";
+import { maxWidth, minWidth } from "./mediaqueries";
 import { stylegun } from "./stylegun";
 
 export {
+    minWidth,
+    maxWidth,
     stylegun,
     getDaysDifference,
     getShortTime,

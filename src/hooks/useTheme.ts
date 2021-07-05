@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import React from "react";
 
-import theme from "../theme";
+import { theme } from "../theme";
 
 const ThemeContext = React.createContext(theme);
 

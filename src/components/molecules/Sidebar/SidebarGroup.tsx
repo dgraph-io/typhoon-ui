@@ -8,8 +8,7 @@ import { styles } from "./Sidebar.styles";
 
 import { Heading, Stack, Link } from "components";
 
-// @ts-ignore
-import history from "libs/browserHistory";
+import history from "./history";
 import { SidebarGroupPropsType, SidebarStackPropsType } from "./Sidebar.types";
 
 const SidebarStack = ({
