@@ -4,12 +4,12 @@ const TerserPlugin = require("terser-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-    entry: [
-        path.resolve(__dirname + "/src/components/index.ts"),
-        path.resolve(__dirname + "/src/theme.ts"),
-        path.resolve(__dirname + "/src/hooks/index.ts"),
-        path.resolve(__dirname + "/src/helpers/index.ts"),
-    ],
+    entry: {
+        components: path.resolve(__dirname + "/src/components/index.ts"),
+        hooks: path.resolve(__dirname + "/src/hooks/index.ts"),
+        helpers: path.resolve(__dirname + "/src/helpers/index.ts"),
+        theme: path.resolve(__dirname + "/src/theme.ts"),
+    },
     devtool: false,
     target: "node",
     externals: [
@@ -21,7 +21,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
+        filename: "[name]/index.js",
         libraryTarget: "umd",
     },
     resolve: {
