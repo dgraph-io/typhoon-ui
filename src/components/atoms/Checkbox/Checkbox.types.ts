@@ -3,6 +3,7 @@ export interface CheckboxPropsType {
     checked?: boolean;
     styles?: Object;
     label?: string;
+    disabled?: boolean;
     onChange?: () => void;
     onClick?: () => void;
 }

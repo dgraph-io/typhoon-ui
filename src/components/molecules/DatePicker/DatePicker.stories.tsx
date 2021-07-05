@@ -18,3 +18,15 @@ export const Default = () => (
         />
     </FocusVisibleManager>
 );
+
+export const DatePickerWithTime = () => (
+    <FocusVisibleManager>
+        <DatePicker
+            disableFutureDate={true}
+            onChange={noop}
+            onClose={noop}
+            now={new Date(2020, 1, 1)}
+            showTime={true}
+        />
+    </FocusVisibleManager>
+);

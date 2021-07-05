@@ -1,5 +1,7 @@
 export interface SelectPropsType {
     styles?: Object;
+    buttonStyles?: Object;
+    listStyles?: Object;
     fullWidth?: boolean;
     label?: string;
     onSelect: any;

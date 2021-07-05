@@ -1,4 +1,3 @@
-
 /** @jsx jsx */
 
 import { jsx } from "@emotion/core";
@@ -8,7 +7,8 @@ import { stylegun } from "helpers/stylegun";
 import { uuid } from "helpers/utils";
 import { Button, Text, Stack, Container } from "components";
 import { keyCodes } from "helpers/constants";
-import theme from "../../../theme";
+
+import theme from "ds/theme";
 import { SelectPropsType, ValueType } from "./Select.types";
 
 const checkIfParent = (parent: any, child: any) => {
@@ -43,6 +43,8 @@ const Select = ({
     disabled,
     maxHeight = 300,
     heightOffset = 0,
+    buttonStyles = {},
+    listStyles = {},
     styles: stylesProp = {},
 }: SelectPropsType) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -128,7 +130,7 @@ const Select = ({
                 ref={selectRef}
                 onClick={toggleList}
                 fullWidth={fullWidth}
-                styles={styles.ButtonStyles}
+                styles={{ ...styles.ButtonStyles, ...buttonStyles }}
                 variant="murmur"
                 aria-haspopup="listbox"
                 disabled={disabled}
@@ -163,6 +165,7 @@ const Select = ({
                                 maxHeight,
                                 heightOffset
                             ),
+                            ...listStyles,
                         },
                         theme: theme,
                     })}

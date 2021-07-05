@@ -25,4 +25,5 @@ export const styles = {
             boxShadow: "{{focus.boxShadow}}",
         },
     },
+    Disabled: { filter: "grayscale(1)", opacity: 0.7, pointerEvents: "none" },
 };

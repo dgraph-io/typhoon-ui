@@ -1,5 +1,4 @@
- /** @jsxRuntime classic */
-/** @jsx jsx */
+/**@jsx jsx */
 import { jsx } from "@emotion/core";
 
 import { Text } from "components";

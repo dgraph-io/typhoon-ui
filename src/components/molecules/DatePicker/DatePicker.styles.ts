@@ -98,4 +98,25 @@ export const styles = {
         position: "relative",
         "::after": UnderLinePseudoElement,
     },
+    InputStyles: {
+        border: 0,
+        width: 5,
+        padding: 1,
+        "::-webkit-inner-spin-button": {
+            WebkitAppearance: "none",
+        },
+        fontWeight: 600,
+    },
+    ChevronStyles: {
+        marginLeft: 1,
+        width: 1,
+        height: 1,
+        borderBottom: "2px solid {{colors.grey}} ",
+        borderRight: "2px solid {{colors.grey}} ",
+        cursor: "pointer",
+        opacity: 0.7,
+        ":hover": {
+            opacity: 1,
+        },
+    },
 };

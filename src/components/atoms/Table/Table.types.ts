@@ -21,11 +21,15 @@ export interface TableHeadPropsType {
     styles?: Object;
 }
 
-export interface TableRowPropsType {
+export interface TableRowPropsType
+    extends React.HTMLProps<HTMLTableRowElement> {
     children?: React.ReactNode;
     styles?: Object;
     clickable?: boolean;
     onClick?: () => void;
+    tabIndex?: number;
+    onKeyPress?: any;
+    ref?: any;
 }
 
 export interface TableHeadingPropsType {

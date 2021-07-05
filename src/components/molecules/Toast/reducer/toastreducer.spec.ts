@@ -1,4 +1,4 @@
-import { ToastType } from "../Toast.types";
+import { ToastType } from "./../Toast.types";
 import { toastReducer, Action } from "./toast.reducer";
 
 describe("test toast reducer", () => {

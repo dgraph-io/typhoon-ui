@@ -1,4 +1,5 @@
 import { monthLabels } from "./constants";
+import { styles } from "./DatePicker.styles";
 
 export const getDateString = (timeStamp: number) => {
     const date = new Date(timeStamp);
@@ -35,4 +36,39 @@ export const isDateInBetween = (
     } else {
         return false;
     }
+};
+
+export const getDatePickerStyles = (
+    now: Date,
+    dayObject: Date,
+    day: {
+        date: number;
+        monthDiff: number;
+        timestamp: number;
+        day: number;
+        year: number;
+        dayString: string;
+    },
+    isSelected: boolean,
+    startDate: null | number,
+    endDate: null | number
+) => {
+    return {
+        ...styles.Box,
+        ...styles.Date,
+        ...(now.toDateString() === dayObject.toDateString()
+            ? styles.Today
+            : {}),
+        ...(day.monthDiff !== 0 ? styles.OtherMonth : {}),
+        ...(isSelected ? styles.SelectedDate : {}),
+        ...(isDateInBetween(day.timestamp, startDate, endDate)
+            ? styles.InBetweenDate
+            : {}),
+        ...(day.timestamp === startDate && endDate !== null
+            ? styles.TrailingRight
+            : {}),
+        ...(day.timestamp === endDate && startDate !== null
+            ? styles.TrailingLeft
+            : {}),
+    };
 };

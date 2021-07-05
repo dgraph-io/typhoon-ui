@@ -1,6 +1,3 @@
-
-
-
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { stylegun } from "helpers/stylegun";
@@ -10,7 +7,9 @@ import { useTheme } from "hooks/useTheme";
 import { styles } from "./Sidebar.styles";
 
 import { Heading, Stack, Link } from "components";
-// import history from "libs/browserHistory";
+
+// @ts-ignore
+import history from "libs/browserHistory";
 import { SidebarGroupPropsType, SidebarStackPropsType } from "./Sidebar.types";
 
 const SidebarStack = ({
@@ -61,9 +60,9 @@ const SidebarGroup = ({
 
     const handleTransition = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        // history.push({
-        //     pathname: e.currentTarget.pathname,
-        // });
+        history.push({
+            pathname: e.currentTarget.pathname,
+        });
     };
 
     return (

@@ -15,6 +15,7 @@ export const styles = {
         ":disabled": {
             opacity: 0.5,
             cursor: "default",
+            pointerEvents: "none",
         },
         ":focus": {
             outline: 0,

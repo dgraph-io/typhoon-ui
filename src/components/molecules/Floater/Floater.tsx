@@ -46,7 +46,7 @@ const Floater = ({
                     >
                         <Card styles={{ ...cardStyles, ...pointerStyles }}>
                             {typeof Content === "string" ? (
-                                <Text color="grey" weight={600}>
+                                <Text color="grey" weight={600} variant={2}>
                                     {Content}
                                 </Text>
                             ) : (

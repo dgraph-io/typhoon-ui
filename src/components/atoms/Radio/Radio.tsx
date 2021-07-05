@@ -26,7 +26,7 @@ const Radio = ({
                 component: "Radio",
             })}
         >
-            <Stack gap={1} align="center">
+            <Stack gap={1} align="center" wrap="nowrap" fullWidth={true}>
                 <div
                     css={stylegun({
                         css: {
@@ -38,7 +38,15 @@ const Radio = ({
                         theme,
                     })}
                 />
-                <Text>{label}</Text>
+                <Text
+                    styles={{
+                        width: "calc(100% - {{space.3}})",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                    }}
+                >
+                    {label}
+                </Text>
                 <input
                     type="radio"
                     checked={checked}

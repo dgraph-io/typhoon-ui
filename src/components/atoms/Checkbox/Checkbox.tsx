@@ -16,6 +16,7 @@ import { CheckboxPropsType } from "./Checkbox.types";
 const Checkbox = ({
     checked,
     label,
+    disabled = false,
     styles: stylesProp = {},
     ...props
 }: CheckboxPropsType): JSX.Element => {
@@ -30,6 +31,7 @@ const Checkbox = ({
         css: {
             ...styles.CheckboxLabelContainer,
             ...(focusVisible ? styles.FocusedCheckbox : {}),
+            ...(disabled ? styles.Disabled : {}),
             ...stylesProp,
         },
         theme,
@@ -44,7 +46,7 @@ const Checkbox = ({
                 {...handleFocus}
                 {...props}
             />
-            <Stack gap={1} align="center">
+            <Stack gap={1} align="center" wrap="nowrap">
                 {checked ? (
                     <Checked css={CheckboxSvgStyles} />
                 ) : (

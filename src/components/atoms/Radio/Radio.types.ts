@@ -4,4 +4,5 @@ export interface RadioPropsType {
     styles?: Object;
     label?: string;
     onChange?: () => void;
+    onClick?: () => void;
 }

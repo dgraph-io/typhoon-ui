@@ -88,8 +88,7 @@ const getMonthDetails = (year: number, month: number) => {
     return monthArray;
 };
 
-export const useCalendar = () => {
-    const now = new Date();
+export const useCalendar = (now:Date = new Date()) => {
     const [selectedMonth, setSelectedMonth] = useState(now.getMonth());
     const [selectedYear, setSelectedYear] = useState(now.getFullYear());
 

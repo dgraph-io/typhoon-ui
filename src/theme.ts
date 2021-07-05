@@ -40,7 +40,8 @@ let tokens: Record<string, any> = {
             surface: "#FAFAFA",
         },
         red: {
-            default: "#ff5a5a",
+            default: "#ff4444",
+            surface: "#FFF6F6",
         },
         white: {
             default: "#FFFFFF",
@@ -48,13 +49,17 @@ let tokens: Record<string, any> = {
         blue: {
             default: "#4e6fff",
             light: " #acdbff",
-            dark: "#2d3fcc",
+            dark: "#1A567E",
+            surface: "#D9EDF7",
         },
         green: {
-            default: "#2EB67D",
+            default: "#32a653",
+            surface: "#ECF7E7",
         },
         yellow: {
             default: "#ffd95c",
+            dark: "#86681D",
+            surface: "#FEF7E3",
         },
         alert: "#EFF8FF",
         purple: {
@@ -264,20 +269,20 @@ const components = {
     Alert: {
         variants: {
             info: {
-                background: "#D9EDF7",
-                color: "#1A567E",
+                background: "blue.surface",
+                color: "blue.dark",
             },
             warning: {
-                background: "#FEF7E3",
-                color: "#86681D",
+                background: "yellow.surface",
+                color: "yellow.dark",
             },
             success: {
-                background: "#ECF7E7",
-                color: "#1A7E42",
+                background: "green.surface",
+                color: "green",
             },
             error: {
-                background: "#FFF6F6",
-                color: "#7E1A1A",
+                background: "red.surface",
+                color: "red",
             },
             tip: {
                 background: "purple.surface",
@@ -287,4 +292,4 @@ const components = {
     },
 };
 
-export default { tokens: flatten(tokens), components };
+export const theme = { tokens: flatten(tokens), components };

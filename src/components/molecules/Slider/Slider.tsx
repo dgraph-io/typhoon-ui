@@ -1,4 +1,3 @@
-
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { SliderProps } from "./Slider.types";
@@ -7,6 +6,7 @@ import { useTheme } from "hooks/useTheme";
 import { styles } from "./Slider.styles";
 
 import { Text, Stack } from "components";
+import { useCallback } from "react";
 
 const Slider = ({
     min,
@@ -19,33 +19,48 @@ const Slider = ({
     minLabel,
     maxLabel,
     step,
+    disabled = false,
 }: SliderProps) => {
     const theme = useTheme();
-
+    const onChangeWithEventPersisted = useCallback(
+        e => {
+            e.persist();
+            onChange(e);
+        },
+        [onChange]
+    );
     return (
-        <Stack direction="vertical">
+        <Stack direction="vertical" styles={stylesProp}>
             {label && <Text>{label}</Text>}
-            <Stack gap={2} fullWidth={true} align="center">
-                {minLabel && <Text>{minLabel}</Text>}
+            <Stack gap={1} fullWidth={true} align="center">
+                {minLabel && (
+                    <Text variant={1} color="grey" weight={500}>
+                        {minLabel}
+                    </Text>
+                )}
                 <input
+                    disabled={disabled}
                     type="range"
                     min={min}
                     max={max}
-                    value={value}
-                    onChange={onChange}
+                    defaultValue={value}
+                    onChange={onChangeWithEventPersisted}
                     onMouseUp={onMouseUp}
                     step={step}
                     css={stylegun({
                         css: {
                             ...styles.Slider,
-                            ...stylesProp,
                         },
                         theme,
                         component: "Slider",
                     })}
                 ></input>
 
-                {maxLabel && <Text>{maxLabel}</Text>}
+                {maxLabel && (
+                    <Text variant={1} color="grey" weight={500}>
+                        {maxLabel}
+                    </Text>
+                )}
             </Stack>
         </Stack>
     );

@@ -44,7 +44,7 @@ function Accordion({
                                 onSelect(isOpen ? null : id);
                             }}
                         >
-                            <Stack align="center" justify="space-between">
+                            <Stack align="center" gap={2}>
                                 {label}
                                 <ChevronContainer isOpen={isOpen} />
                             </Stack>

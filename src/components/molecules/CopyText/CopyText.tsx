@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { useState } from "react";
 import { stylegun } from "../../../helpers/stylegun";
 import { styles } from "./CopyText.styles";
-import { Input, Button } from "components"
+import { Input, Button } from "components";
 import { ReactComponent as CopyIcon } from "./svgs/copy.svg";
 import Stack from "components/layouts/Stack/Stack";
 import { useTheme } from "hooks/useTheme";
