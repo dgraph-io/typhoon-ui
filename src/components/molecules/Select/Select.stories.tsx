@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from "./Select";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 import { SelectType } from "./Select.types";
 
 export default {
@@ -12,7 +12,7 @@ export const SelectControlled = () => {
     const [selected, setSelected] = useState(null);
 
     return (
-        <FocusVisibleManager>
+        
             <Select
                 label={"Select an option"}
                 selected={selected}
@@ -27,7 +27,7 @@ export const SelectControlled = () => {
                         id: `op${index}`,
                     }))}
             />
-        </FocusVisibleManager>
+        
     );
 };
 
@@ -37,7 +37,7 @@ export const SelectLongName = () => {
     });
 
     return (
-        <FocusVisibleManager>
+        
             <Select
                 styles={{
                     width: "100px",
@@ -55,6 +55,6 @@ export const SelectLongName = () => {
                         id: `op${index}`,
                     }))}
             />
-        </FocusVisibleManager>
+        
     );
 };

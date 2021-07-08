@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Radio from "./Radio";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 
 export default {
     title: "Atoms/Radio",
@@ -11,7 +11,7 @@ export const RadioControlled = () => {
     const [checked, setChecked] = useState(true);
 
     return (
-        <FocusVisibleManager>
+        
             <Radio
                 label={"Click me to toggle"}
                 checked={checked}
@@ -20,7 +20,7 @@ export const RadioControlled = () => {
                 }}
                 id="radio"
             />
-        </FocusVisibleManager>
+        
     );
 };
 

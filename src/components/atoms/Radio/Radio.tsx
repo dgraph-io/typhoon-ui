@@ -3,8 +3,6 @@ import { jsx } from "@emotion/react";
 import { styles } from "./Radio.styles";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";
-
-import { useFocusVisible } from "hooks/useFocusVisible";
 import { RadioPropsType } from "./Radio.types";
 
 import { Text, Stack } from "components";
@@ -16,7 +14,6 @@ const Radio = ({
     ...props
 }: RadioPropsType): JSX.Element => {
     const theme = useTheme();
-    const { focusVisible, ...handleFocus } = useFocusVisible();
 
     return (
         <label
@@ -33,7 +30,7 @@ const Radio = ({
                             ...(checked
                                 ? styles.RadioChecked
                                 : styles.RadioUnchecked),
-                            ...(focusVisible ? styles.FocusedRadio : {}),
+                            ":focus-visible": styles.FocusedRadio,
                         },
                         theme,
                     })}
@@ -51,7 +48,6 @@ const Radio = ({
                     type="radio"
                     checked={checked}
                     css={styles.RadioInput}
-                    {...handleFocus}
                     {...props}
                 />
             </Stack>

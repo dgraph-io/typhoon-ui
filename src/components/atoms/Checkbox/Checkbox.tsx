@@ -8,9 +8,6 @@ import { ReactComponent as Checked } from "./svgs/checked.svg";
 import { ReactComponent as Unchecked } from "./svgs/unchecked.svg";
 
 import { Stack, Text } from "components";
-// import { uuid } from "helpers/utils";
-
-import { useFocusVisible } from "hooks/useFocusVisible";
 import { CheckboxPropsType } from "./Checkbox.types";
 
 const Checkbox = ({
@@ -21,7 +18,6 @@ const Checkbox = ({
     ...props
 }: CheckboxPropsType): JSX.Element => {
     const theme = useTheme();
-    const { focusVisible, ...handleFocus } = useFocusVisible();
     const CheckboxSvgStyles = stylegun({
         css: styles.CheckboxSvg,
         theme,
@@ -30,9 +26,9 @@ const Checkbox = ({
     const CheckboxLabelStyles = stylegun({
         css: {
             ...styles.CheckboxLabelContainer,
-            ...(focusVisible ? styles.FocusedCheckbox : {}),
             ...(disabled ? styles.Disabled : {}),
             ...stylesProp,
+            ":focus-visible": styles.FocusedCheckbox,
         },
         theme,
         component: "Checkbox",
@@ -43,7 +39,6 @@ const Checkbox = ({
             <input
                 type="checkbox"
                 css={stylegun({ css: styles.CheckboxInput, theme })}
-                {...handleFocus}
                 {...props}
             />
             <Stack gap={1} align="center" wrap="nowrap">

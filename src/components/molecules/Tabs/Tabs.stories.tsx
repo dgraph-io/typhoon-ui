@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 import Text from "components/atoms/Text/Text";
 import Tabs from "./Tabs";
 import Tab from "./Tab";
@@ -14,7 +14,7 @@ export const TabsControlled = () => {
     const [activeTabId, setActiveTabId] = useState("tab1");
 
     return (
-        <FocusVisibleManager>
+        
             <Tabs selected={activeTabId} onSelect={setActiveTabId}>
                 <Tab label="One" id={"tab1"}>
                     <Stack gap={2} direction="vertical">
@@ -32,6 +32,6 @@ export const TabsControlled = () => {
                     </Stack>
                 </Tab>
             </Tabs>
-        </FocusVisibleManager>
+        
     );
 };

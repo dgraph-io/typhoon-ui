@@ -5,7 +5,6 @@ import React from "react";
 import { styles } from "./Card.styles";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";
-import { useFocusVisible } from "hooks/useFocusVisible";
 
 import { CardPropsType } from "./Card.types";
 
@@ -21,7 +20,6 @@ const Card = React.forwardRef(
     ) => {
         const theme = useTheme();
         const Element = clickable ? "button" : "div";
-        const { focusVisible, ...handleFocus } = useFocusVisible();
         return (
             <Element
                 ref={ref}
@@ -29,15 +27,14 @@ const Card = React.forwardRef(
                     css: {
                         ...styles.Card,
                         cursor: clickable ? "pointer" : "unset",
-                        ...(clickable && focusVisible
-                            ? styles.FocusedCard
+                        ...(clickable
+                            ? { ":focus-visible": styles.FocusedCard }
                             : {}),
                         ...stylesProp,
                     },
                     theme,
                     component: "Card",
                 })}
-                {...(clickable ? handleFocus : {})}
                 {...props}
             >
                 {children}

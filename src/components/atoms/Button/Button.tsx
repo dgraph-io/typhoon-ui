@@ -4,7 +4,6 @@ import { jsx } from "@emotion/react";
 import { styles } from "./Button.styles";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";
-import { useFocusVisible } from "hooks/useFocusVisible";
 
 import { ButtonPropsType } from "./Button.types";
 
@@ -21,13 +20,12 @@ const Button = React.forwardRef(
     ) => {
         const width = fullWidth ? "100%" : "auto";
         const theme = useTheme();
-        const { focusVisible, ...handleFocus } = useFocusVisible();
         return (
             <button
                 css={stylegun({
                     css: {
                         ...styles.Button,
-                        ...(focusVisible ? styles.FocusedButton : {}),
+                        ":focus-visible" : styles.FocusedButton,
                         width,
                         ...stylesProp,
                     },
@@ -37,7 +35,6 @@ const Button = React.forwardRef(
                 })}
                 ref={ref}
                 {...props}
-                {...handleFocus}
             >
                 {children}
             </button>

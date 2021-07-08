@@ -4,7 +4,6 @@ import { jsx } from "@emotion/react";
 import { styles } from "./Link.styles";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";
-import { useFocusVisible } from "hooks/useFocusVisible";
 import { LinkPropsType } from "./Link.types";
 
 const ensureScheme = (value: any, defaultScheme = "https") => {
@@ -30,7 +29,6 @@ const Link = ({
 }: LinkPropsType): JSX.Element => {
     const finalHref = ensureScheme(href, defaultScheme);
     const theme = useTheme();
-    const { focusVisible, ...handleFocus } = useFocusVisible();
 
     const linkProps = {
         href: finalHref,
@@ -54,15 +52,14 @@ const Link = ({
             css={stylegun({
                 css: {
                     ...styles.Link,
-                    ...(focusVisible ? styles.focusStyles : {}),
                     ...(isContent ? { display: "contents" } : {}),
                     ...stylesProp,
+                    ":focus-visible": styles.focusStyles,
                 },
                 theme,
                 component: "Link",
             })}
             {...linkProps}
-            {...handleFocus}
         >
             {children || finalHref}
         </a>

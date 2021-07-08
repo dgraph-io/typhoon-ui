@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "./Link";
 import { Stack, Text } from "components";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 
 export default {
     title: "Atoms/Link",
@@ -9,7 +9,7 @@ export default {
 };
 
 export const ExternalLink = () => (
-    <FocusVisibleManager>
+    
         <Stack direction="horizontal" gap={4} inline align="flex-start">
             <Link href="https://dgraph.io" openInNewTab>
                 <Text>Link with new tab</Text>
@@ -18,5 +18,5 @@ export const ExternalLink = () => (
                 <Text>Link</Text>
             </Link>
         </Stack>
-    </FocusVisibleManager>
+    
 );

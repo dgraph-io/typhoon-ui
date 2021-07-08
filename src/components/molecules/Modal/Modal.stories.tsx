@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
 import Modal from "./Modal";
 import { Text, Input, Button } from "components";
 import ReactDOM from "react-dom";
@@ -29,7 +28,7 @@ export const ModalControlled = () => {
     };
 
     return (
-        <FocusVisibleManager>
+        <>
             <Button onClick={openModal}>Open Modal</Button>
             <Modal
                 continueLabel="Submit"
@@ -44,7 +43,7 @@ export const ModalControlled = () => {
                 <Input placeholder="Field 1" />
                 <Input placeholder="Field 2" />
             </Modal>
-        </FocusVisibleManager>
+        </>
     );
 };
 
@@ -58,14 +57,14 @@ export const ModalOpenWithoutContinue = () => {
         setIsOpen(false);
     };
     return (
-        <FocusVisibleManager>
+        <>
             <Button onClick={openModal}>Open Modal</Button>
             <Modal
                 heading={"This is a modal heading"}
                 isOpen={isOpen}
                 onClose={closeModal}
             />
-        </FocusVisibleManager>
+        </>
     );
 };
 
@@ -80,7 +79,7 @@ export const ModalOpenWithOnContinue = () => {
     };
 
     return (
-        <FocusVisibleManager>
+        <>
             <Button onClick={openModal}>Open Modal</Button>
             <Modal
                 heading={"This is a modal heading"}
@@ -88,6 +87,6 @@ export const ModalOpenWithOnContinue = () => {
                 onClose={closeModal}
                 onContinue={closeModal}
             />
-        </FocusVisibleManager>
+        </>
     );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 import CopyText from "./CopyText";
 
 export default {
@@ -9,8 +9,8 @@ export default {
 
 export const CopyTextDefault = () => {
     return (
-        <FocusVisibleManager>
+        
             <CopyText text="Copy me" />
-        </FocusVisibleManager>
+        
     );
 };

@@ -4,7 +4,7 @@ import { useToast } from "hooks/useToast";
 
 import Toast from "./Toast";
 import { ToastManager } from "./ToastProvider";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 import { noop } from "helpers/utils";
 
 export default {
@@ -21,39 +21,37 @@ export default {
 
 export const DefaultToast = () => {
     return (
-        <FocusVisibleManager>
-            <Stack direction="vertical" gap={2}>
-                <Toast
-                    id="001"
-                    heading="Hello world"
-                    description="This is a description"
-                    variant="info"
-                    permanent={true}
-                    onCloseToast={noop}
-                />
-                <Toast
-                    id="002"
-                    heading="Hello world"
-                    description="This is a description"
-                    variant="warning"
-                    permanent={true}
-                />
-                <Toast
-                    id="003"
-                    heading="Hello world"
-                    description="This is a description"
-                    variant="success"
-                    permanent={true}
-                />
-                <Toast
-                    id="004"
-                    heading="Hello world"
-                    description="This is a description"
-                    variant="error"
-                    permanent={true}
-                />
-            </Stack>
-        </FocusVisibleManager>
+        <Stack direction="vertical" gap={2}>
+            <Toast
+                id="001"
+                heading="Hello world"
+                description="This is a description"
+                variant="info"
+                permanent={true}
+                onCloseToast={noop}
+            />
+            <Toast
+                id="002"
+                heading="Hello world"
+                description="This is a description"
+                variant="warning"
+                permanent={true}
+            />
+            <Toast
+                id="003"
+                heading="Hello world"
+                description="This is a description"
+                variant="success"
+                permanent={true}
+            />
+            <Toast
+                id="004"
+                heading="Hello world"
+                description="This is a description"
+                variant="error"
+                permanent={true}
+            />
+        </Stack>
     );
 };
 

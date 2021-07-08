@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 import AccordionItem from "./AccordionItem";
 import { Text } from "components";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 
 export default {
     title: "Molecules/Accordion",
@@ -12,7 +12,7 @@ export default {
 export const AccordionDefault = () => {
     const [activeId, setActiveId] = useState<string | null>(null);
     return (
-        <FocusVisibleManager>
+        
             <Accordion
                 selected={activeId}
                 onSelect={id => {
@@ -31,6 +31,6 @@ export const AccordionDefault = () => {
                     <Text>This is Contact Section</Text>
                 </AccordionItem>
             </Accordion>
-        </FocusVisibleManager>
+        
     );
 };

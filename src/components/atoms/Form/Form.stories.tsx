@@ -1,5 +1,5 @@
 import React from "react";
-import { FocusVisibleManager } from "hooks/useFocusVisible";
+
 import Stack from "components/layouts/Stack/Stack";
 import Form from "./Form";
 import Card from "components/atoms/Card/Card";
@@ -59,7 +59,7 @@ export const Default = () => {
     const { name, email, discount, address, crust, extras } = form;
 
     return (
-        <FocusVisibleManager>
+        
             <Card styles={{ width: "500px", margin: "auto" }}>
                 <Form onSubmit={event => event?.preventDefault()}>
                     <Stack
@@ -188,6 +188,6 @@ export const Default = () => {
                     </Stack>
                 </Form>
             </Card>
-        </FocusVisibleManager>
+        
     );
 };

@@ -26,8 +26,6 @@ import Select from "./molecules/Select/Select";
 import Tabs from "./molecules/Tabs/Tabs";
 import Tab from "./molecules/Tabs/Tab";
 import ControlledTabs from "./molecules/Tabs/ControlledTabs";
-import Sidebar from "./molecules/Sidebar/Sidebar";
-import SidebarGroup from "./molecules/Sidebar/SidebarGroup";
 import Navbar from "./molecules/Navbar/Navbar";
 import NavbarLogo from "./molecules/Navbar/NavbarLogo";
 import CopyText from "./molecules/CopyText/CopyText";
@@ -77,8 +75,6 @@ export {
     Tabs,
     Tab,
     ControlledTabs,
-    Sidebar,
-    SidebarGroup,
     Navbar,
     NavbarLogo,
     CopyText,
