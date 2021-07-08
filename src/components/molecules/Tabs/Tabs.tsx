@@ -61,7 +61,7 @@ const Tabs = ({
 
                 {showDivider && <Divider />}
             </Stack>
-            <Container css={stylegun({ css: styles.TabContainer, theme })}>
+            <Container styles={stylegun({ css: styles.TabContainer, theme })}>
                 {tabContent}
             </Container>
         </Stack>

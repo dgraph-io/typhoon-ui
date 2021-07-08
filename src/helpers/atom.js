@@ -1,7 +1,7 @@
 //? For now we are not using the atom abstraction instead we resolve styles using the method styleGun()
 //
 // import React from "react";
-// import { jsx } from "@emotion/core";
+// import { jsx } from "@emotion/react";
 // import { resolveStyles } from "./resolver";
 // import PropTypes from "prop-types";
 

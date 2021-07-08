@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { styles } from "./Select.styles";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { stylegun } from "helpers/stylegun";

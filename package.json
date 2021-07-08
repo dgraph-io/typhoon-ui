@@ -1,14 +1,15 @@
 {
-  "name": "typhoon-ui",
-  "version": "0.0.1",
+  "name": "@dgraph-io/typhoon-ui",
+  "version": "0.0.8",
   "description": "Dgraph's design system",
-  "main": "dist/index.js",
-  "typings": "dist/components/index.d.ts",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build": "webpack --mode production",
-    "build-storybook": "build-storybook"
+    "build": "webpack --mode production && npm run copypackage",
+    "build-storybook": "build-storybook",
+    "copypackage": "cp -rf package.json dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   },
   "homepage": "https://github.com/dgraph-io/typhoon-ui#readme",
   "dependencies": {
-    "@emotion/react": "^11.1.5",
+    "@emotion/react": "^11.4.0",
     "esbuild": "^0.11.10",
     "framer-motion": "^4.1.3",
     "history": "^5.0.0",
@@ -47,12 +48,15 @@
     "@types/jest": "^26.0.22",
     "@types/react-dom": "^17.0.3",
     "babel-loader": "^8.2.2",
+    "dts-bundle": "^0.7.3",
+    "dts-bundle-webpack": "^1.0.2",
     "file-loader": "^6.2.0",
     "optimize-css-assets-webpack-plugin": "^6.0.0",
-    "react": ">=17.0.2",
+    "react": ">=16.12.0",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": ">=17.0.2",
+    "react-dom": ">=16.12.0",
     "resolve-url-loader": "^3.1.2",
+    "source-map-loader": "^3.0.0",
     "terser-webpack-plugin": "^4.2.3",
     "ts-loader": "^8.2.0",
     "webpack": "^4.0.0",

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import Container from "components/layouts/Container/Container";
 import { useHover } from "hooks/useHover";
 import Floater from "../Floater/Floater";

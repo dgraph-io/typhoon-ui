@@ -17,6 +17,6 @@ export const ImageWithWidth = () => (
     <Image
         src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80"
         alt="design system"
-        css={{ width: "40%" }}
+        styles={{ width: "40%" }}
     />
 );

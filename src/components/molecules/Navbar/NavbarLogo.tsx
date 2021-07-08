@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { useTheme } from "hooks/useTheme";
 import { stylegun } from "helpers/stylegun";
 import { styles } from "./Navbar.styles";

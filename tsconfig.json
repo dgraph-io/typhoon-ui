@@ -17,5 +17,5 @@
     "declaration": true,
     "outDir": "./dist/"
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+  "include": ["src/index.d.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }

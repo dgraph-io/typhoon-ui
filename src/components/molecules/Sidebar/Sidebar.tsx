@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { stylegun } from "helpers/stylegun";
 import { styles } from "./Sidebar.styles";
 import { useTheme } from "hooks/useTheme";
@@ -17,7 +17,7 @@ const Sidebar = ({
         <Stack
             direction="vertical"
             gap={3}
-            css={stylegun({
+            styles={stylegun({
                 css: { width, ...styles.Sidebar, ...stylesProp },
                 theme,
                 component: "Sidebar",

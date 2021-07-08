@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { Stack, Heading, Card, Text, Button } from "components";
 import { ToastPropsType } from "./Toast.types";
 
@@ -45,7 +45,7 @@ const Toast = ({
 
     return (
         <Card
-            css={stylegun({
+            styles={stylegun({
                 css: {
                     ...styles.ToastStyles,
                     ...stylesProp,

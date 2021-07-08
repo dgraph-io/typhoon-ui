@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { Stack, Heading, Text, Card } from "components";
 import { AlertPropsType } from "./Alert.types";
 import { ReactComponent as InfoIcon } from "./svgs/info.svg";

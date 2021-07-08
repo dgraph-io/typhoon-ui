@@ -8,8 +8,12 @@ export const stylegun = ({
     component,
     variant,
 }: StylegunType): Record<string, any> => {
-    const componentStyles = getComponentStyles({ component, theme });
-    const variantStyles = getVarianStyles({ variant, component, theme });
+    const componentStyles = component
+        ? getComponentStyles({ component, theme })
+        : {};
+    const variantStyles = variant
+        ? getVarianStyles({ variant, component, theme })
+        : {};
     const resolvedCSS = resolveStyles(css, theme);
     return {
         ...componentStyles,

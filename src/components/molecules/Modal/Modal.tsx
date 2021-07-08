@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useRef, useEffect } from "react";
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { styles } from "./Modal.styles";
 import { stylegun } from "helpers/stylegun";
 import { useTheme } from "hooks/useTheme";
@@ -96,7 +96,7 @@ const Modal = ({
                 role="dialog"
                 aria-modal={isOpen}
                 aria-hidden={isOpen}
-                css={modalContainerStyles}
+                styles={modalContainerStyles}
                 ref={modalRef}
             >
                 <Stack direction="vertical" gap={2} styles={{height: "100%"}}>

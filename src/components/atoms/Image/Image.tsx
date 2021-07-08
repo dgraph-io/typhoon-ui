@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 
 import { styles } from "./Image.styles";
 import { stylegun } from "helpers/stylegun";

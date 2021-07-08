@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { styles } from "./Avatar.styles";
 
 import { stylegun } from "helpers/stylegun";
@@ -20,7 +20,7 @@ const Avatar = ({
     const theme = useTheme();
     return (
         <Stack
-            css={stylegun({
+            styles={stylegun({
                 css: {
                     ...styles.Avatar,
                     ...(round ? styles.Round : {}),

@@ -107,3 +107,20 @@ export const keyCodes = {
     ESCAPE: 27,
     TAB: 9,
 };
+
+export const monthLabels = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+];
+
+export const weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];

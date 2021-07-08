@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 import { stylegun } from "helpers/stylegun";
 
 import React from "react";
@@ -27,7 +27,7 @@ const SidebarStack = ({
             onClick={onClick}
             direction="horizontal"
             align="center"
-            css={stylegun({
+            styles={stylegun({
                 css: {
                     ...styles.SidebarGroup,
                     ...(disabled ? styles.Disabled : {}),

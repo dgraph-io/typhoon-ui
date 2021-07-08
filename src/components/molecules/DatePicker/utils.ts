@@ -1,4 +1,4 @@
-import { monthLabels } from "./constants";
+import { monthLabels } from "helpers";
 import { styles } from "./DatePicker.styles";
 
 export const getDateString = (timeStamp: number) => {

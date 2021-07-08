@@ -35,12 +35,14 @@ import Tour, { TourContext, TourElement } from "./molecules/Tour/Tour";
 import Floater from "./molecules/Floater/Floater";
 import Alert from "./molecules/Alert/Alert";
 import Toast from "./molecules/Toast/Toast";
-import ToastContext from "./molecules/Toast/ToastProvider";
+import ToastContext, { ToastManager } from "./molecules/Toast/ToastProvider";
 import Accordion from "./molecules/Accordion/Accordion";
 import AccordionItem from "./molecules/Accordion/AccordionItem";
 import Tooltip from "./molecules/Tooltip/Tooltip";
 import InfoTooltip from "./molecules/InfoTooltip/InfoTooltip";
 import Slider from "./molecules/Slider/Slider";
+import Paginator from "./molecules/Paginator/Paginator";
+import DatePicker from "./molecules/DatePicker/DatePicker"
 
 // Layouts
 import Stack from "./layouts/Stack/Stack";
@@ -85,6 +87,7 @@ export {
     Floater,
     Alert,
     Toast,
+    ToastManager,
     ToastContext,
     TourElement,
     Accordion,
@@ -92,6 +95,8 @@ export {
     Tooltip,
     InfoTooltip,
     Slider,
+    Paginator,
+    DatePicker,
     // Layouts
     Stack,
     Container,

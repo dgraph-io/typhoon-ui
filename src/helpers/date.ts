@@ -1,4 +1,8 @@
-import { monthLabels } from "components/molecules/DatePicker/constants";
+import { monthLabels } from "./constants";
+
+export const getNow = () => {
+    return new Date();
+};
 
 export const getDayBefore = (days: number, referenceDay = new Date()) => {
     const newDate = new Date(referenceDay);
@@ -20,9 +24,27 @@ export const getShortDate = (date: Date) => {
 };
 
 export const getShortTime = (date: Date) =>
-    `${date.getHours()}:${date.getMinutes()}`;
+    `${getZeroPaddedTime(date.getHours())}:${getZeroPaddedTime(
+        date.getMinutes()
+    )}`;
 
 export const getDaysDifference = (startDate: Date, endDate: Date) => {
     const time_difference = endDate.getTime() - startDate.getTime();
     return Math.trunc(time_difference / (1000 * 60 * 60 * 24));
 };
+
+export const getHoursDifference = (startDate: Date, endDate: Date) => {
+    const time_difference = endDate.getTime() - startDate.getTime();
+    return Math.trunc(time_difference / (1000 * 60 * 60));
+};
+
+export const getZeroPaddedTime = (time: number) => {
+    if (time < 10) {
+        return `0${time}`;
+    } else {
+        return `${time}`;
+    }
+};
+
+export const getFormattedDateString = (date: Date) =>
+    new Date(date).toDateString().slice(4);

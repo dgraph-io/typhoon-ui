@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useContext, useEffect, useReducer } from "react";
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/react";
 
 import { ThemeProvider } from "hooks/useTheme";
 import { Modal, Text, Floater } from "components";

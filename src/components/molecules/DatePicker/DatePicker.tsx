@@ -10,9 +10,9 @@ import Container from "components/layouts/Container/Container";
 import { styles } from "./DatePicker.styles";
 import Input from "components/atoms/Input/Input";
 import { getDateString, mapToSubArrays, getDatePickerStyles } from "./utils";
-import { weekDays } from "./constants";
 import { TimePicker } from "./TimePicker";
 import { useTimePicker } from "./useTimePicker";
+import { weekDays } from "helpers";
 
 export default ({
     disableFutureDate = false,
