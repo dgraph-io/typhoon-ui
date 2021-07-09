@@ -1,7 +1,6 @@
+import { ToastContextValue } from "components/molecules/Toast/Toast.types";
 import { useContext } from "react";
 
-import ToastManager from "../components/molecules/Toast/ToastProvider";
-
-export const useToast = () => {
-    return useContext(ToastManager);
+export const useToast = (context: React.Context<ToastContextValue>) => {
+    return useContext<ToastContextValue>(context);
 };

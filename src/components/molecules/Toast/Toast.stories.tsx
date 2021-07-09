@@ -3,16 +3,17 @@ import { Stack, Button } from "components";
 import { useToast } from "hooks/useToast";
 
 import Toast from "./Toast";
-import { ToastManager } from "./ToastProvider";
-
+import { createToastContext, ToastManager } from "./ToastProvider";
 import { noop } from "helpers/utils";
+
+const ToastContext = createToastContext();
 
 export default {
     title: "Molecules/Toast",
     component: Toast,
     decorators: [
         (Story: any) => (
-            <ToastManager>
+            <ToastManager context={ToastContext}>
                 <Story />
             </ToastManager>
         ),
@@ -56,10 +57,7 @@ export const DefaultToast = () => {
 };
 
 export const ToastAutoClose = () => {
-    // @ts-ignore
-    // Context is in decorator
-    const { addToast } = useToast();
-
+    const { addToast } = useToast(ToastContext);
     return (
         <Stack>
             <Button
@@ -78,9 +76,7 @@ export const ToastAutoClose = () => {
 };
 
 export const PermanentToast = () => {
-    // @ts-ignore
-    // Context is in decorator
-    const { addToast } = useToast();
+    const { addToast } = useToast(ToastContext);
 
     return (
         <Stack>
@@ -101,9 +97,7 @@ export const PermanentToast = () => {
 };
 
 export const ToastWarning = () => {
-    // @ts-ignore
-    // Context is in decorator
-    const { addToast } = useToast();
+    const { addToast } = useToast(ToastContext);
 
     return (
         <Stack>

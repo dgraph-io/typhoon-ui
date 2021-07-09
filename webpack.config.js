@@ -37,7 +37,19 @@ module.exports = {
         rules: [
             {
                 test: /\.svg$/,
-                use: ["@svgr/webpack", "url-loader"],
+                use: [
+                    {
+                        loader: "@svgr/webpack",
+                        options: {
+                            svgoConfig: {
+                                plugins: {
+                                    removeViewBox: false,
+                                },
+                            },
+                        },
+                    },
+                    "url-loader",
+                ],
             },
             {
                 test: /\.(sass|scss)$/,

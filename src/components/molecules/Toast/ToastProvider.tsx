@@ -1,8 +1,8 @@
-import React, { createContext, useReducer } from "react";
+import React, { useReducer } from "react";
 import Toast from "./Toast";
 import {
-    ToastContextValue,
     ToastContextProviderType,
+    ToastContextValue,
     ToastPropsType,
     ToastType,
 } from "./Toast.types";
@@ -11,11 +11,13 @@ import { styles } from "./Toast.styles";
 import { Stack } from "components";
 import { uuid } from "helpers/utils";
 
-const ToastContext = createContext({} as ToastContextValue);
+export const createToastContext = () =>
+    React.createContext({} as ToastContextValue);
 
-export default ToastContext;
-
-export function ToastManager({ children }: ToastContextProviderType) {
+export function ToastManager({
+    context: ToastContext,
+    children,
+}: ToastContextProviderType) {
     const [toasts, dispatch] = useReducer(toastReducer, []);
 
     const addToast = (toast: ToastPropsType) => {

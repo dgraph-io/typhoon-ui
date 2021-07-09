@@ -14,6 +14,7 @@ export interface ToastType extends ToastPropsType {
 
 export interface ToastContextProviderType {
     children: React.ReactNode;
+    context: React.Context<ToastContextValue>
 }
 
 export type ToastContextValue = {
