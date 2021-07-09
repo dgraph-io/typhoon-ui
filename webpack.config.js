@@ -4,25 +4,21 @@ const TerserPlugin = require("terser-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-    entry: {
-        components: path.resolve(__dirname + "/src/components/index.ts"),
-        hooks: path.resolve(__dirname + "/src/hooks/index.tsx"),
-        helpers: path.resolve(__dirname + "/src/helpers/index.ts"),
-        theme: path.resolve(__dirname + "/src/theme.ts"),
-    },
+    entry: path.resolve(__dirname + "/src/index.tsx"),
     devtool: false,
     target: "node",
     externals: [
         nodeExternals(),
         {
-            react: "commonjs2 react",
-            "react-dom": "commonjs2 react-dom",
+            react: "umd react",
+            "react-dom": "umd react-dom",
         },
     ],
+    mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name]/index.js",
-        libraryTarget: "commonjs2",
+        filename: "index.js",
+        libraryTarget: "umd",
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
