@@ -14,6 +14,7 @@ const Floater = ({
     content: Content,
     styles: stylesProp = {},
     onClick,
+    color = "grey",
     children,
 }: FloaterPropType) => {
     const theme = useTheme();
@@ -46,7 +47,7 @@ const Floater = ({
                     >
                         <Card styles={{ ...cardStyles, ...pointerStyles }}>
                             {typeof Content === "string" ? (
-                                <Text color="grey" weight={600} variant={2}>
+                                <Text weight={600} variant={2} color={color}>
                                     {Content}
                                 </Text>
                             ) : (

@@ -6,4 +6,5 @@ export interface FloaterPropType {
     show?: boolean;
     styles?: Object;
     content?: string | any;
+    color?: string;
 }
