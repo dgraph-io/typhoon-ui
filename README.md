@@ -1,6 +1,13 @@
 # 🌀 typhoon-ui
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/dgraph-io/typhoon-ui/blob/main/LICENSE) [![node](https://img.shields.io/badge/node-10.14.6-brightgreen.svg)](https://github.com/dgraph-io/typhoon-ui) [![npm version](https://badge.fury.io/js/%40dgraph-io%2Ftyphoon-ui.svg)](https://badge.fury.io/js/%40dgraph-io%2Ftyphoon-ui)
 
 
+[Note: This is a work in progress, API is subject to change]
+## Installation
+
+```
+npm i @dgraph-io/typhoon-ui
+```
 
 ## Design System Concepts
 

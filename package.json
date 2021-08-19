@@ -1,6 +1,6 @@
 {
   "name": "@dgraph-io/typhoon-ui",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Dgraph's design system",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -9,7 +9,7 @@
     "storybook": "start-storybook -p 6006",
     "build": "webpack --mode production && npm run copypackage",
     "build-storybook": "build-storybook",
-    "copypackage": "cp -rf package.json dist"
+    "copypackage": "cp -rf package.json dist && cp README.md dist"
   },
   "repository": {
     "type": "git",
