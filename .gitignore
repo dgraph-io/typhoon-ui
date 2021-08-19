@@ -9,3 +9,4 @@ docs
 npm-debug.log*
 .DS_Store
 dist
+storybook-static
