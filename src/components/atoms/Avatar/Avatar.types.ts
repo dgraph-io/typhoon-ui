@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
 export interface AvatarPropsType {
     src?: string;
-    styles?: Object;
+    styles?: StylesObject;
     round?: boolean;
     bgColor?: string;
     color?: string;

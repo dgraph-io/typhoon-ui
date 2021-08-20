@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface ContainerPropsType extends React.HTMLProps<HTMLDivElement> {
-    styles?: Object;
-    theme?: Object;
+    styles?: StylesObject;
     fullWidth?: true | false;
     children?: React.ReactNode;
     onClick?: () => void;

@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface LinkPropsType {
-    styles?: Object;
-    theme?: Object;
+    styles?: StylesObject;
     children?: React.ReactNode;
     openInNewTab?: boolean;
     download?: boolean;

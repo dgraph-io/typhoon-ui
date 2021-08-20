@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
 import { FloaterPosition } from "../Floater/Floater.types";
 
 export type InfoToolTipPropsType = {
     content: React.ReactNode;
     position?: FloaterPosition;
-    styles?: Object;
+    styles?: StylesObject;
 };

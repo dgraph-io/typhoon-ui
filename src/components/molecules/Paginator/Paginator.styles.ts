@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     Left: {
         width: 1,
         height: 1,

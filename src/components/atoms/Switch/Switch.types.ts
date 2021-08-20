@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface SwitchPropsType {
     checked: boolean;
     label?: string;
-    styles?: Object;
+    styles?: StylesObject;
     disabled?: boolean;
     id: string;
     onClick?: () => void;

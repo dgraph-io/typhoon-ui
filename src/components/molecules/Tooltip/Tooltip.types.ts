@@ -15,11 +15,12 @@
  */
 
 import { ReactNode } from "react";
+import { StylesObject } from "types";
 import { FloaterPosition } from "../Floater/Floater.types";
 
 export type TooltipPropsType = {
     content: string | ReactNode;
     children: string | ReactNode;
     position?: FloaterPosition;
-    styles?: Object;
+    styles?: StylesObject;
 };

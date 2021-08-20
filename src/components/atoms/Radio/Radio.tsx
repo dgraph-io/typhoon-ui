@@ -15,6 +15,7 @@
  */
 
 /** @jsx jsx */
+import React from "react";
 import { jsx } from "@emotion/react";
 import { styles } from "./Radio.styles";
 import { stylegun } from "helpers/stylegun";
@@ -63,7 +64,15 @@ const Radio = ({
                 <input
                     type="radio"
                     checked={checked}
-                    css={styles.RadioInput}
+                    css={{
+                        position: "absolute",
+                        size: 0,
+                        clip: "rect(0,0,0,0)",
+                        margin: 0,
+                        border: 0,
+                        opacity: 0,
+                        pointerEvents: "none",
+                    }}
                     {...props}
                 />
             </Stack>

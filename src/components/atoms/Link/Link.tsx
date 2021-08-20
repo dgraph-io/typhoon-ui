@@ -70,7 +70,10 @@ const Link = ({
                     ...styles.Link,
                     ...(isContent ? { display: "contents" } : {}),
                     ...stylesProp,
-                    ":focus-visible": styles.focusStyles,
+                    ":focus-visible": {
+                        outline: "none",
+                        boxShadow: "{{focus.boxShadow}}",
+                    },
                 },
                 theme,
                 component: "Link",

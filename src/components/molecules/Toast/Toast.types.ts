@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface ToastPropsType {
     heading?: string;
     variant?: "success" | "error" | "info" | "warning";
-    styles?: Object;
+    styles?: StylesObject;
     description?: string;
     onCloseToast?: () => void;
     id?: string;

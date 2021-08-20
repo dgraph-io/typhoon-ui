@@ -69,6 +69,7 @@ module.exports = async ({ config }) => {
     hooks: path.resolve(__dirname, "../src/hooks/"),
     components: path.resolve(__dirname, "../src/components/"),
     helpers: path.resolve(__dirname, "../src/helpers/"),
+    theme: path.resolve(__dirname, "../src/theme.ts"),
   };
 
   config.module.rules = config.module.rules.map((rule) => {

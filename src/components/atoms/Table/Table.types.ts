@@ -14,33 +14,35 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface TablePropsType {
     children: React.ReactNode;
     fullWidth?: boolean;
-    styles?: Object;
+    styles?: StylesObject;
 }
 
 export interface TableBodyPropsType {
     children: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
 }
 
 export interface TableDescriptionPropsType {
     children: React.ReactNode | string;
-    styles?: Object;
+    styles?: StylesObject;
     colSpan?: number;
 }
 
 export interface TableHeadPropsType {
     align?: "left" | "right" | "center";
     children: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
 }
 
 export interface TableRowPropsType
     extends React.HTMLProps<HTMLTableRowElement> {
     children?: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
     clickable?: boolean;
     onClick?: () => void;
     tabIndex?: number;
@@ -50,6 +52,6 @@ export interface TableRowPropsType
 
 export interface TableHeadingPropsType {
     children?: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
     colSpan?: number;
 }

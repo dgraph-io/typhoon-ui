@@ -83,7 +83,10 @@ const Toast = ({
                             <CrossIcon
                                 height={CROSS_ICON_SIZE}
                                 width={CROSS_ICON_SIZE}
-                                style={styles.CrossIcon}
+                                style={{
+                                    cursor: "pointer",
+                                    marginRight: 1,
+                                }}
                                 onClick={onCloseToast}
                             />
                         </Button>

@@ -18,12 +18,12 @@ import { getVarianStyles, getComponentStyles } from "./utils";
 import { resolveStyles } from "./resolver";
 import { StylegunType } from "./helpers.types";
 
-export const stylegun = ({
+export const stylegun = <T>({
     css = {},
     theme,
     component,
     variant,
-}: StylegunType): Record<string, any> => {
+}: StylegunType<T>): Record<string, any> => {
     const componentStyles = component
         ? getComponentStyles({ component, theme })
         : {};

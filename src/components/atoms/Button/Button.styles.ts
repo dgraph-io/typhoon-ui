@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject | React.CSSProperties> = {
     Button: {
         fontSize: "3",
         paddingX: 2,
@@ -36,8 +38,5 @@ export const styles = {
         ":focus": {
             outline: 0,
         },
-    },
-    FocusedButton: {
-        boxShadow: "{{focus.boxShadow}}",
     },
 };

@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface CheckboxPropsType {
     id?: string;
     checked?: boolean;
-    styles?: Object;
+    styles?: StylesObject;
     label?: string;
     disabled?: boolean;
     onChange?: () => void;

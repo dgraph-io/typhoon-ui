@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface ProgressBarPropsType {
     progress: number;
-    styles?: Object;
-    fillStyles?: Object;
-    theme?: Object;
+    styles?: StylesObject;
+    fillStyles?: StylesObject;
     width?: string;
     bgcolor?: string;
     height?: number;

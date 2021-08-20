@@ -14,20 +14,22 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface ComponentStylesType {
     component: any;
     theme: any;
 }
 
 export interface VariantStylesType {
-    variant: string;
+    variant: string | number;
     component: any;
     theme: any;
 }
 
-export interface StylegunType {
-    css?: any;
-    theme?: any;
-    component?: any;
-    variant?: any;
+export interface StylegunType<T> {
+    css?: Object;
+    theme: T;
+    component?: string;
+    variant?: string | number;
 }

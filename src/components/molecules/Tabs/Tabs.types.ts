@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface TabPropsType {
     children: JSX.Element;
     label: string;
@@ -25,7 +27,7 @@ export interface TabsPropsType {
     children?: React.ReactNode;
     onSelect: any;
     selected: string;
-    styles?: Object;
+    styles?: StylesObject;
     showDivider?: boolean;
     tabWidth?: string;
 }

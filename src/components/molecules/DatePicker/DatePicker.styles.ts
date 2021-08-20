@@ -14,18 +14,9 @@
  * limitations under the License.
  */
 
-const UnderLinePseudoElement = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    color: "pink",
-    content: `""`,
-    size: 3,
-    borderBottom: "2px solid {{colors.grey.light}}",
-    fontWeight: 600,
-};
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     Box: {
         size: 5,
         textAlign: "center",
@@ -68,7 +59,15 @@ export const styles = {
             border: "{{lineThickness.2}} solid {{colors.pink}}",
         },
         "::after": {
-            ...UnderLinePseudoElement,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            color: "pink",
+            content: `""`,
+            size: 3,
+            borderBottom: "2px solid {{colors.grey.light}}",
+            fontWeight: 600,
             borderColor: "transparent",
         },
     },
@@ -112,7 +111,17 @@ export const styles = {
 
     Today: {
         position: "relative",
-        "::after": UnderLinePseudoElement,
+        "::after": {
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            color: "pink",
+            content: `""`,
+            size: 3,
+            borderBottom: "2px solid {{colors.grey.light}}",
+            fontWeight: 600,
+        },
     },
     InputStyles: {
         border: 0,

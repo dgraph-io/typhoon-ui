@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export type ButtonVariantType =
     | "scream"
     | "yell"
@@ -25,7 +27,7 @@ export interface ButtonPropsType
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     fullWidth?: boolean;
     variant?: ButtonVariantType;
-    styles?: Object;
+    styles?: StylesObject;
     theme?: Object;
     children?: React.ReactNode;
     onClick?: () => void;
