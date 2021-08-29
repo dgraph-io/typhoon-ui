@@ -42,6 +42,7 @@ module.exports = {
             hooks: path.resolve(__dirname, "/src/hooks/"),
             components: path.resolve(__dirname, "/src/components/"),
             helpers: path.resolve(__dirname, "/src/helpers/"),
+            theme: path.resolve(__dirname, "../src/theme.ts"),
         },
         symlinks: false,
     },

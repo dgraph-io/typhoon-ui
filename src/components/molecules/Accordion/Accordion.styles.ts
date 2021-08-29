@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export const styles: Record<string, StylesObject> = {
     ChevronStyles: {

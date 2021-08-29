@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 import { FloaterPosition } from "../Floater/Floater.types";
 
 export type InfoToolTipPropsType = {

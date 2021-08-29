@@ -15,7 +15,7 @@
  */
 
 import React from "react";
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export interface InputPropsType extends React.HTMLProps<HTMLInputElement> {
     variant?: "small" | "medium" | "large";

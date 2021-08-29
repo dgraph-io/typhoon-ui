@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export type FloaterPosition = "top" | "left" | "right" | "bottom" | "rightTop";
 export interface FloaterPropType {

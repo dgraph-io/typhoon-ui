@@ -70,6 +70,7 @@ module.exports = async ({ config }) => {
     components: path.resolve(__dirname, "../src/components/"),
     helpers: path.resolve(__dirname, "../src/helpers/"),
     theme: path.resolve(__dirname, "../src/theme.ts"),
+    types: path.resolve(__dirname, "/src/types/"),
   };
 
   config.module.rules = config.module.rules.map((rule) => {

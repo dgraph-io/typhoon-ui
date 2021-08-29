@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export interface AlertPropsType {
     variant?: "info" | "warning" | "error" | "success" | "tip";

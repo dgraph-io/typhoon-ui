@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export interface ContainerPropsType extends React.HTMLProps<HTMLDivElement> {
     styles?: StylesObject;

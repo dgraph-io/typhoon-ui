@@ -15,7 +15,7 @@
  */
 
 import { ButtonVariantType } from "components/atoms/Button/Button.types";
-import { StylesObject } from "types";
+import { StylesObject } from "../../../types";
 
 export interface ModalPropsType {
     children?: React.ReactNode;
