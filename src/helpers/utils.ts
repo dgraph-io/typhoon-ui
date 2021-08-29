@@ -65,7 +65,7 @@ export function getVarianStyles({
 }
 
 export function isVariantPresent(
-    variant: string,
+    variant: string | number,
     component: any,
     theme: any
 ): Object {
@@ -78,13 +78,14 @@ export function isVariantPresent(
 }
 
 export const uuid = (): string => {
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (
-        c
-    ) {
-        var r = window.crypto.getRandomValues(new Uint32Array(1))[0] % 16,
-            v = c === "x" ? r : (r & 0x3) | 0x8;
-        return v.toString(16);
-    });
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+        /[xy]/g,
+        function (c) {
+            var r = window.crypto.getRandomValues(new Uint32Array(1))[0] % 16,
+                v = c === "x" ? r : (r & 0x3) | 0x8;
+            return v.toString(16);
+        }
+    );
 };
 
 export const noop = (): void => {};

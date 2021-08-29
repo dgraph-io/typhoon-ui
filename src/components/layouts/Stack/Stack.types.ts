@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface StackPropsType {
     align?: string;
-    styles?: Object;
+    styles?: StylesObject;
     direction: "horizontal" | "vertical";
     wrap?: "wrap" | "nowrap" | "wrap-reverse";
     gap?: number;
     inline?: boolean;
     justify?: string;
-    theme?: Object;
     fullWidth?: boolean;
     children: React.ReactNode;
     onClick?: () => void;

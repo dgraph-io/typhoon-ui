@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     CheckboxLabelContainer: {
         cursor: "pointer",
     },
@@ -32,14 +34,6 @@ export const styles = {
     CheckboxSvg: {
         cursor: "pointer",
         size: 3,
-    },
-
-    FocusedCheckbox: {
-        cursor: "pointer",
-        ":focus-within svg": {
-            borderRadius: 1,
-            boxShadow: "{{focus.boxShadow}}",
-        },
     },
     Disabled: { filter: "grayscale(1)", opacity: 0.7, pointerEvents: "none" },
 };

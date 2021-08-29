@@ -43,8 +43,8 @@ const Avatar = ({
                     backgroundColor: text ? bgColor : {},
                     ...stylesProp,
                 },
-                theme,
                 component: "Avatar",
+                theme,
                 variant,
             })}
         >

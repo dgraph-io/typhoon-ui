@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     SwitchLabel: {
         position: "relative",
     },

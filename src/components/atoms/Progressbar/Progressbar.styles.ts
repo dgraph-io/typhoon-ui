@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export const styles = {
     ProgressbarContainer: {
         width: "100%",

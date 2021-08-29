@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface SelectPropsType {
-    styles?: Object;
-    buttonStyles?: Object;
-    listStyles?: Object;
+    styles?: StylesObject;
+    buttonStyles?: StylesObject;
+    listStyles?: StylesObject;
     fullWidth?: boolean;
     label?: string;
     onSelect: any;

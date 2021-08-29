@@ -44,7 +44,13 @@ const Checkbox = ({
             ...styles.CheckboxLabelContainer,
             ...(disabled ? styles.Disabled : {}),
             ...stylesProp,
-            ":focus-visible": styles.FocusedCheckbox,
+            ":focus-visible": {
+                cursor: "pointer",
+                ":focus-within svg": {
+                    borderRadius: 1,
+                    boxShadow: "{{focus.boxShadow}}",
+                },
+            },
         },
         theme,
         component: "Checkbox",

@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles: any = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     Table: {
         tableLayout: "fixed",
         borderCollapse: "collapse",

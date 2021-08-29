@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface FormPropsType extends React.HTMLProps<HTMLFormElement> {
     fullWidth?: boolean;
-    styles?: Object;
+    styles?: StylesObject;
 }

@@ -17,6 +17,8 @@
 import React from "react";
 import Avatar from "./Avatar";
 import { Stack } from "components";
+import { ThemeProvider } from "hooks";
+import { theme } from "theme";
 
 export default {
     title: "Atoms/Avatar",

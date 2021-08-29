@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface CardPropsType {
     clickable?: boolean;
     children: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
     theme?: Object;
     role?: string;
     onClick?: () => void;

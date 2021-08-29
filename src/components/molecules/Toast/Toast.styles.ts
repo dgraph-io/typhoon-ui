@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-export const styles = {
+import { StylesObject } from "types";
+
+export const styles: Record<string, StylesObject> = {
     ToastStyles: {
         minWidth: "400px",
         padding: 1,
@@ -24,10 +26,6 @@ export const styles = {
         right: 2,
         bottom: 2,
         position: "fixed",
-    },
-    CrossIcon: {
-        cursor: "pointer",
-        marginRight: 1,
     },
     CloseButton: {
         height: "fit-content",

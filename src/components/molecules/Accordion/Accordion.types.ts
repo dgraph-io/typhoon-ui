@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 
 export interface AccordionPropsType {
     selected: string | null;
     children: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
     onSelect: (id: string | null) => void;
 }
 

@@ -15,12 +15,13 @@
  */
 
 import { ButtonVariantType } from "components/atoms/Button/Button.types";
+import { StylesObject } from "types";
 
 export interface ModalPropsType {
     children?: React.ReactNode;
     closeLabel?: string;
     continueLabel?: string;
-    styles?: object;
+    styles?: StylesObject;
     heading?: string;
     isOpen: boolean;
     onClose?: () => void;

@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface NavbarPropsType {
     children?: React.ReactNode;
-    styles?: Object;
+    styles?: StylesObject;
 }
 
 export interface NavbarLogoPropsType {
     src: string;
     alt: string;
-    styles?: Object;
+    styles?: StylesObject;
     link?: string;
 }

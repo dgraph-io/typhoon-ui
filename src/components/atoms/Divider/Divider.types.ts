@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface DividerPropsType {
-    styles?: Object;
-    theme?: Object;
+    styles?: StylesObject;
+    theme?: StylesObject;
     variant?: "solid" | "dashed";
     width?: string;
 }

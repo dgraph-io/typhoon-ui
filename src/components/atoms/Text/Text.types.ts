@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import { StylesObject } from "types";
+
 export interface TextPropsType {
-    styles?: Object;
-    theme?: Object;
+    styles?: StylesObject;
     children: React.ReactNode;
     variant?: number;
     weight?: number;

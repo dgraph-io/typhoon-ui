@@ -14,20 +14,10 @@
  * limitations under the License.
  */
 
-export const styles: any = {
+export const styles = {
     Radio: {
         cursor: "pointer",
     },
-    RadioInput: {
-        position: "absolute",
-        size: 0,
-        clip: "rect(0,0,0,0)",
-        margin: 0,
-        border: 0,
-        opacity: 0,
-        pointerEvents: "none",
-    },
-
     FocusedRadio: {
         boxShadow: "{{focus.boxShadow}}",
     },
@@ -39,7 +29,6 @@ export const styles: any = {
         border: "{{lineThickness.1}} solid {{colors.pink}}",
         borderRadius: 3,
     },
-
     RadioChecked: {
         boxSizing: "content-box",
         cursor: "pointer",

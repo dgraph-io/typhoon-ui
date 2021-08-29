@@ -41,7 +41,9 @@ const Button = React.forwardRef(
                 css={stylegun({
                     css: {
                         ...styles.Button,
-                        ":focus-visible" : styles.FocusedButton,
+                        ":focus-visible": {
+                            boxShadow: "{{focus.boxShadow}}",
+                        },
                         width,
                         ...stylesProp,
                     },
