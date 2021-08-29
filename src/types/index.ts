@@ -1,5 +1,6 @@
 import { CSSObject } from "@emotion/react";
 
-export interface StylesObject extends Omit<CSSObject, "zIndex"> {
+// @ts-ignore
+export interface StylesObject extends CSSObject {
     zIndex?: number | string;
 }
