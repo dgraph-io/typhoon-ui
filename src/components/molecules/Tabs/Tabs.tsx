@@ -20,7 +20,7 @@ import { useTheme } from "hooks/useTheme";
 import { styles } from "./Tabs.styles";
 import { TabsPropsType } from "./Tabs.types";
 
-import { Button, Stack, Divider, Container } from "components";
+import { Button, Stack, Divider, Container, Text } from "components";
 
 const Tabs = ({
     selected,
@@ -29,16 +29,17 @@ const Tabs = ({
     showDivider = true,
     styles: stylesProp = {},
     tabWidth,
+    unselected = "Select a tab",
 }: TabsPropsType) => {
     const theme = useTheme();
 
-    const tabList = React.Children.toArray(children).map(
-        (tab: any) => tab.props
-    );
+    const childrenList = React.Children.toArray(children);
 
-    const selectedTab: any = React.Children.toArray(children).filter(
+    const tabList = childrenList.map((tab: any) => tab.props);
+
+    const selectedTab: any = childrenList.find(
         ({ props: tabProps }: any) => tabProps.id === selected
-    )[0];
+    ) || <Text>{unselected}</Text>;
 
     const tabContent = React.cloneElement(selectedTab);
 

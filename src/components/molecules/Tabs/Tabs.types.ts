@@ -30,6 +30,7 @@ export interface TabsPropsType {
     styles?: StylesObject;
     showDivider?: boolean;
     tabWidth?: string;
+    unselected?: React.ReactNode | string;
 }
 
 export interface ControlledTabsPropsType {

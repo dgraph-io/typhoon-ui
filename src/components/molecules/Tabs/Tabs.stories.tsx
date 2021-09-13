@@ -30,24 +30,74 @@ export const TabsControlled = () => {
     const [activeTabId, setActiveTabId] = useState("tab1");
 
     return (
-        
-            <Tabs selected={activeTabId} onSelect={setActiveTabId}>
-                <Tab label="One" id={"tab1"}>
-                    <Stack gap={2} direction="vertical">
-                        <Text>Content for One</Text>
-                    </Stack>
-                </Tab>
-                <Tab label="Two" id={"tab2"}>
-                    <Stack gap={2} direction="vertical">
-                        <Text>Content for Two</Text>
-                    </Stack>
-                </Tab>
-                <Tab label="Three" id={"tab3"}>
-                    <Stack gap={2} direction="vertical">
-                        <Text>Content for Three</Text>
-                    </Stack>
-                </Tab>
-            </Tabs>
-        
+        <Tabs selected={activeTabId} onSelect={setActiveTabId}>
+            <Tab label="One" id={"tab1"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for One</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Two" id={"tab2"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Two</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Three" id={"tab3"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Three</Text>
+                </Stack>
+            </Tab>
+        </Tabs>
+    );
+};
+
+export const TabsControlledWithUnavailableOption = () => {
+    const [activeTabId, setActiveTabId] = useState("tabx");
+
+    return (
+        <Tabs selected={activeTabId} onSelect={setActiveTabId}>
+            <Tab label="One" id={"tab1"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for One</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Two" id={"tab2"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Two</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Three" id={"tab3"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Three</Text>
+                </Stack>
+            </Tab>
+        </Tabs>
+    );
+};
+
+export const TabsControlledWithCustomUnselection = () => {
+    const [activeTabId, setActiveTabId] = useState("tabx");
+
+    return (
+        <Tabs
+            selected={activeTabId}
+            onSelect={setActiveTabId}
+            unselected={"Select something"}
+        >
+            <Tab label="One" id={"tab1"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for One</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Two" id={"tab2"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Two</Text>
+                </Stack>
+            </Tab>
+            <Tab label="Three" id={"tab3"}>
+                <Stack gap={2} direction="vertical">
+                    <Text>Content for Three</Text>
+                </Stack>
+            </Tab>
+        </Tabs>
     );
 };
