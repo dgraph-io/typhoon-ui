@@ -28,7 +28,7 @@ export type FormConfig<T extends FormConfigValueType> = {
 
 export type SetValueFn<T> = <K extends keyof T>(key: K, value: T[K]) => void;
 
-export type RuleNameType = "required" | "email" | "nonEmptyString";
+export type RuleNameType = "required" | "email" | "nonEmptyString" | "passwordLength";
 export interface RuleType {
     message: string;
     checkIsValid: Function;
