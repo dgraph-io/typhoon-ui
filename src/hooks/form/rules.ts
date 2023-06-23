@@ -37,4 +37,12 @@ export const RULES: Record<RuleNameType, RuleType> = {
             return value.trim();
         },
     },
+    passwordLength: {
+        type: "passwordLength",
+        message: "Password length should be between 8 to 64 characters",
+        checkIsValid: (value: string) => {
+            const re = /^.{8,64}$/;
+            return re.test(String(value));
+        },
+    },
 };
