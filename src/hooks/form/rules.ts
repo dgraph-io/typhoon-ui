@@ -50,7 +50,7 @@ export const RULES: Record<RuleNameType, RuleType> = {
         type: "emailLength",
         message: "Email length should be between 6 to 254 characters",
         checkIsValid: (value: string) => {
-            const re = /^.{8,254}$/;
+            const re = /^.{6,254}$/;
             return re.test(String(value));
         },
     },
