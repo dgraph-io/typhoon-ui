@@ -1,6 +1,6 @@
 {
   "name": "@dgraph-io/typhoon-ui",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Dgraph's design system",
   "main": "index.js",
   "typings": "index.d.ts",
